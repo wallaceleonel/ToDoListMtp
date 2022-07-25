@@ -32,3 +32,21 @@ L -> Liskov's Substitution Principle
 I -> Interface Segregation Principle
 
 D -> Dependency Injection for loosely coupled architecture
+
+
+## Como rodar esse projeto
+
+Configurar string de conexão no arquivo appsettings.json
+```sh
+ "AllowedHosts": "*",
+  "ConnectionStrings": {
+    "DefaultConnection": "Data Source=InformarData;Persist Security Info=True;User ID=Informar use; Initial Catalog= NomdeDB; Password=Informar senha"
+  }
+
+```
+## Como fazer as migrações
+
+```sh
+add-migration nome da migration
+update-database
+```
