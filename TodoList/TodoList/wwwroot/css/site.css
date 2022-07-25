@@ -54,3 +54,14 @@
             font-size: 18px;
         }
 }
+
+#logo {
+    height: 40px;
+    width: 40px;
+}
+#text {
+    margin-left: 10px;
+}
+#mainNav {
+
+}

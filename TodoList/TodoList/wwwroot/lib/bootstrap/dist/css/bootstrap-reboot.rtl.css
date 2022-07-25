@@ -237,9 +237,10 @@ figure {
   margin: 0 0 1rem;
 }
 
-img,
-svg {
-  vertical-align: middle;
+logo{
+    vertical-align: middle;
+    height: 40px;
+    width: 40px;
 }
 
 table {

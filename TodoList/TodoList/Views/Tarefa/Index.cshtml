@@ -3,7 +3,7 @@
 @{
     ViewData["Title"] = "Index";
 }
-<div id="product-grid" class="table-responsive">
+<div id="product-grid" class="table-responsive" style = "margin-top: 6rem;">
     <table class="table table-borderless">
         <thead class="control-label">
             <tr>
@@ -13,6 +13,9 @@
              {
                 <tr class="table-light">
                     <td>
+                        <div>
+                            <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
+                        </div>
                         @Html.DisplayFor(modelItem => item.NomeTarefa)
                     </td>
                     <td>
