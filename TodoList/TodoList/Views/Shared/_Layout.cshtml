@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - ToDoLisMvc</title>
+    <title>@ViewData["Title"] - ToDoList</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/ToDoLisMvc.styles.css" asp-append-version="true" />
@@ -26,7 +26,11 @@
         <div class="navbar-collapse collapse">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-            <a class="nav-link js-scroll-trigger"  asp-action="CriarTarefa"> Add new tasks</a>
+            <a class="nav-link js-scroll-trigger"  asp-action="CriarTarefa">
+                 <button type="button" class="btn btn-outline-success">
+                                <span class="material-icons">post_add</span>
+                            </button>
+            </a>
             </li>
           </ul>
         </div>
@@ -36,10 +40,16 @@
               <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger"  asp-action="CriarTarefa">Add new tasks</a>
-            </li>
+             
+                <a class="nav-link js-scroll-trigger"  asp-action="CriarTarefa">
+                 <button type="button" class="btn btn-outline-success">
+                                <span class="material-icons">post_add</span>
+                            </button>
+            </a>
+            
+        </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href"https://github.com/wallaceleonel">Contact</a>
+              <a class="nav-link js-scroll-trigger" href="https://github.com/wallaceleonel">Contact</a>
             </li>
           </ul>
         </div>
@@ -53,7 +63,7 @@
     </div>
     <footer class="border-top footer text-muted">
         <div class="container"> 
-            &copy; 2022 - To Do List  - <a href"https://github.com/wallaceleonel">Contact</a>
+            &copy; 2022 - To Do List  - <a href="https://github.com/wallaceleonel">Wallace Lenel</a>
         </div>
     </footer>
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>

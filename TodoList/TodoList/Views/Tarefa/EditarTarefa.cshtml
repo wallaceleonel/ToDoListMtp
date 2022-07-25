@@ -3,33 +3,31 @@
 @{
     ViewData["Title"] = "EditarTarefa";
 }
-
-<h1>EditarTarefa</h1>
-
-<h4>Tarefa</h4>
 <hr />
-<div class="row">
+<div class="row" style = "margin-top:40px;">
     <div class="col-md-4">
         <form asp-action="EditarTarefa">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Id" />
             <div class="form-group">
-                <label asp-for="NomeTarefa" class="control-label"></label>
+                  <h4 style = "margin-top:20px;">New Task </h4>
                 <input asp-for="NomeTarefa" class="form-control" />
                 <span asp-validation-for="NomeTarefa" class="text-danger"></span>
             </div>
-            <button type="button" class="btn btn-success">
-                                <span class="material-icons">edit_note</span>
-                                Edit
+             <div class="form-group">
+                  <button type="submit" class="btn btn-warning">
+                                <span class="material-icons">save_as</span>
                             </button>
+            </div>
         </form>
+         <div>
+    <a asp-action="Index">
+        <button type="button" class="btn btn-outline-secondary">
+             <span class="material-icons">reply_all</span>
+        </button>
+    </a>
     </div>
 </div>
-
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
-
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }
