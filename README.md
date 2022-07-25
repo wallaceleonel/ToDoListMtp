@@ -34,9 +34,9 @@ I -> Interface Segregation Principle
 D -> Dependency Injection for loosely coupled architecture
 
 
-## Como rodar esse projeto
+## How to run this project
 
-Configurar string de conexão no arquivo appsettings.json
+Configure connection strings in appsettings.json
 ```sh
  "AllowedHosts": "*",
   "ConnectionStrings": {
@@ -44,9 +44,22 @@ Configurar string de conexão no arquivo appsettings.json
   }
 
 ```
-## Como fazer as migrações
+## How to do migrations
 
 ```sh
 add-migration nome da migration
 update-database
 ```
+## Tools used
+
+C#
+
+.net Core
+
+Html
+
+Css
+
+Javascript
+
+Sql Server
