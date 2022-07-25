@@ -10,29 +10,28 @@
         </thead>
         <tbody>
             @foreach (var item in Model)
-             {
-                <tr class="table-light">
-                    <td>
-                        <div>
-                            <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
-                        </div>
-                        @Html.DisplayFor(modelItem => item.NomeTarefa)
-                    </td>
-                    <td>
-                        <a asp-action="EditarTarefa" asp-route-id="@item.Id" style="text-decoration:none">
+             {<div class="d-flex bd-highlight">
+                <div class="p-2 flex-grow-1 bd-highlight">
+                    <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
+                    @Html.DisplayFor(modelItem => item.NomeTarefa)
+                    </div>
+                <div class="p-2 bd-highlight">
+                    <a asp-action="EditarTarefa" asp-route-id="@item.Id" style="text-decoration:none">
                             <button type="button" class="btn btn-success">
                                 <span class="material-icons">inventory_2</span>
                                 Editar
                             </button>
                         </a>
-                        <a asp-action="ExcluirTarefa" asp-route-id="@item.Id" style="text-decoration:none">
+                    </div>
+                <div class="p-2 bd-highlight">
+                     <a asp-action="ExcluirTarefa" asp-route-id="@item.Id" style="text-decoration:none">
                             <button type="button" class="btn btn-secondary" onclick="">
                                 <span class="material-icons">open_in_new</span>
                                 Deletar
                             </button>
                         </a>
-                    </td>
-                </tr>
+                    </div>
+                </div>
              }
 
         </tbody>
