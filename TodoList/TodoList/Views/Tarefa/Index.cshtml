@@ -1,0 +1,37 @@
+﻿@model IEnumerable<TodoList.Models.Tarefa>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<div id="product-grid" class="table-responsive">
+    <table class="table table-borderless">
+        <thead class="control-label">
+            <tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+             {
+                <tr class="table-light">
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NomeTarefa)
+                    </td>
+                    <td>
+                        <a asp-action="EditarTarefa" asp-route-id="@item.Id" style="text-decoration:none">
+                            <button type="button" class="btn btn-success">
+                                <span class="material-icons">inventory_2</span>
+                                Editar
+                            </button>
+                        </a>
+                        <a asp-action="ExcluirTarefa" asp-route-id="@item.Id" style="text-decoration:none">
+                            <button type="button" class="btn btn-secondary" onclick="">
+                                <span class="material-icons">open_in_new</span>
+                                Deletar
+                            </button>
+                        </a>
+                    </td>
+                </tr>
+             }
+
+        </tbody>
+    </table>
+</div>
